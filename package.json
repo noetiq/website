@@ -31,7 +31,7 @@
     "unpic": "^3.18.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.3.1",
+    "@astrojs/mdx": "^3.0.0",
     "@astrojs/partytown": "^2.1.0",
     "@astrojs/tailwind": "5.1.0",
     "@eslint/js": "^9.1.1",
