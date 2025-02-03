@@ -1,15 +1,31 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro'
+import Layout from '~/layouts/PageLayout.astro'
+
+import Hero from '~/components/widgets/Hero.astro'
+import CallToAction from '~/components/widgets/CallToAction.astro'
 
 const metadata = {
-  title: 'Coming Soon',
+  title: 'Noetiq Research',
+  ignoreTitleTemplate: true,
 }
 ---
 
-<PageLayout metadata={metadata}>
-  <div class="flex flex-col h-[calc(100vh-64px)] bg-center bg-cover bg-no-repeat">
-    <div class="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto space-y-5 text-center">
-      <h1 class="text-6xl font-bold uppercase transition duration-500">Coming Soon</h1>
-    </div>
-  </div>
-</PageLayout>
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot='title'> Driving breakthroughs in research </Fragment>
+    <Fragment slot='subtitle'> Transforming research into market-ready products and services </Fragment>
+  </Hero>
+
+  <CallToAction
+    title='Coming soon'
+    subtitle='We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!'
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download Template',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>
