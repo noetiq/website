@@ -1,4 +1,4 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks'
 
 export const headerData = {
   links: [
@@ -29,7 +29,7 @@ export const headerData = {
     // },
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
-};
+}
 
 export const footerData = {
   links: [
@@ -91,4 +91,4 @@ export const footerData = {
   footNote: `
     &copy; ${new Date().getFullYear()} Noetiq Research Inc. All Rights Reserved.
   `,
-};
+}
