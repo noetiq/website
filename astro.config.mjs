@@ -1,5 +1,6 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
+import svgr from 'vite-plugin-svgr'
 
 import { defineConfig, squooshImageService } from 'astro/config'
 
@@ -9,6 +10,7 @@ import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
 import icon from 'astro-icon'
 import compress from '@playform/compress'
+import react from '@astrojs/react' // Import the React integration
 
 import astrowind from './vendor/integration'
 
@@ -72,6 +74,8 @@ export default defineConfig({
     astrowind({
       config: './src/config.yaml',
     }),
+
+    react(),
   ],
 
   image: {
@@ -85,6 +89,7 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [svgr()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
