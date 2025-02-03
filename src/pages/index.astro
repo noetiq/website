@@ -1,6 +1,8 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro'
-import Header from '~/components/widgets/Header.jsx'
+import {Image} from 'astro:assets'
+import Pearl2Image from '~/assets/images/pearl2.svg'
+// import ProductHighlightImage from '~/assets/images/product-highlight.png'
 
 const metadata = {
   title: 'Noetiq Research | Home',
@@ -11,131 +13,131 @@ const metadata = {
 
 <PageLayout metadata={metadata}>
   <section
-    class="relative
+    class='relative
     h-screen
     flex
     flex-col
     items-center
     justify-center
     text-center
-    overflow-hidden"
+    overflow-hidden'
     style="
-    background-image: url('/src/assets/images/Francium.jpeg');
+    background-image: url('src/assets/images/francium.jpeg');
     background-size: cover;
-    background-position: center;
-  "
+    background-position: center;"
   >
-    <div class="absolute inset-0 bg-[#F5EFE6]/80 backdrop-blur-sm"></div>
+    <div class='absolute inset-0 bg-[#F5EFE6]/80 backdrop-blur-sm'></div>
 
-    <div class="relative z-10 flex flex-col items-center justify-center max-w-screen-lg mx-auto px-4">
+    <div class='relative z-10 flex flex-col items-center justify-center max-w-screen-lg mx-auto px-4'>
       <h1
-        class="font-extrabold
+        class='font-extrabold
         text-6xl
         md:text-8xl
         text-[#4B3832]
         mb-4
         font-[Anuphan]
-        tracking-tight"
+        tracking-tight'
       >
         Introducing
       </h1>
 
-      <div class="-mb-10 w-80 h-auto">
-        <img
-          src="/src/assets/images/pearl2.svg"
-          alt="Pearl Illustration"
-          class="w-full h-auto object-cover drop-shadow-2xl"
-        />
+      <div class='-mb-10 w-80 h-auto'>
+        <Image src={Pearl2Image} alt='Noetiq Logo' class='w-full h-auto object-cover drop-shadow-2xl' />
       </div>
 
       <h2
-        class="font-extrabold
+        class='font-extrabold
         text-5xl
         md:text-7xl
         text-[#4B3832]
         font-[Anuphan]
-        tracking-tight"
+        tracking-tight'
       >
         PiRL Framework
       </h2>
 
-      <p class="max-w-xl text-lg text-[#6F5844] mt-4">
+      <p class='max-w-xl text-lg text-[#6F5844] mt-4'>
         Discover how PiRL revolutionizes machine learning for businesses and beyond.
       </p>
       <a
-        href="/solutions"
-        class="inline-block mt-6
+        href='/solutions'
+        class='inline-block mt-6
         px-6 py-3
         rounded
         bg-[#8C6A5E]
         text-white
         shadow-md
         hover:bg-[#735649]
-        transition"
+        transition'
       >
         Learn More
       </a>
     </div>
   </section>
 
-  <section class="py-16 bg-[#EFE3D7]">
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
-      <div class="flex-1">
-        <img src="/images/product-highlight.png" alt="Product Highlight" class="w-full rounded-lg shadow-md" />
-      </div>
-      <div class="flex-1 text-center md:text-left">
-        <h2 class="text-4xl font-bold text-[#4B3832]">Introducing Our Latest Breakthrough</h2>
-        <p class="mt-4 text-lg text-[#6F5844]">
+  <section class='py-16 bg-[#EFE3D7]'>
+    <div class='container mx-auto flex flex-col md:flex-row items-center gap-8 px-6'>
+      <!-- TODO: Image doesn't exist -->
+      <!-- <div class='flex-1'>
+        <Image src={ProductHighlightImage} alt='Product Highlight' class='w-full rounded-lg shadow-md' />
+      </div> -->
+      <div class='flex-1 text-center md:text-left'>
+        <h2 class='text-4xl font-bold text-[#4B3832]'>Introducing Our Latest Breakthrough</h2>
+        <p class='mt-4 text-lg text-[#6F5844]'>
           Discover how our proprietary ML technology is redefining the way businesses approach efficiency and
           innovation.
         </p>
         <a
-          href="/solutions"
-          class="inline-block mt-6 px-6 py-3 text-white bg-[#8C6A5E] rounded shadow-lg hover:bg-[#735649] transition"
+          href='/solutions'
+          class='inline-block mt-6 px-6 py-3 text-white bg-[#8C6A5E] rounded shadow-lg hover:bg-[#735649] transition'
           >Learn More</a
         >
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-[#EDE0D4]">
-    <div class="container mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold text-[#4B3832] mb-12">What We Do</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/images/icon-solution.svg" alt="Solution Icon" class="mx-auto mb-6" />
-          <h3 class="text-2xl font-semibold text-[#4B3832]">We Build Solutions</h3>
-          <p class="mt-4 text-[#6F5844]">Crafting proprietary ML algorithms tailored to industry needs.</p>
+  <section class='py-16 bg-[#EDE0D4]'>
+    <div class='container mx-auto text-center px-6'>
+      <h2 class='text-4xl font-bold text-[#4B3832] mb-12'>What We Do</h2>
+      <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <div class='p-6 bg-white shadow-lg rounded-lg'>
+          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
+          <img src='/images/icon-solution.svg' alt='Solution Icon' class='mx-auto mb-6' />
+          <h3 class='text-2xl font-semibold text-[#4B3832]'>We Build Solutions</h3>
+          <p class='mt-4 text-[#6F5844]'>Crafting proprietary ML algorithms tailored to industry needs.</p>
         </div>
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/images/icon-research.svg" alt="Research Icon" class="mx-auto mb-6" />
-          <h3 class="text-2xl font-semibold text-[#4B3832]">We Conduct Research</h3>
-          <p class="mt-4 text-[#6F5844]">Expanding the boundaries of what ML can achieve.</p>
+        <div class='p-6 bg-white shadow-lg rounded-lg'>
+          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
+          <img src='/images/icon-research.svg' alt='Research Icon' class='mx-auto mb-6' />
+          <h3 class='text-2xl font-semibold text-[#4B3832]'>We Conduct Research</h3>
+          <p class='mt-4 text-[#6F5844]'>Expanding the boundaries of what ML can achieve.</p>
         </div>
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/images/icon-transform.svg" alt="Transform Icon" class="mx-auto mb-6" />
-          <h3 class="text-2xl font-semibold text-[#4B3832]">We Transform Problems</h3>
-          <p class="mt-4 text-[#6F5844]">Turning inefficiencies into opportunities with scalable technology.</p>
+        <div class='p-6 bg-white shadow-lg rounded-lg'>
+          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
+          <img src='/images/icon-transform.svg' alt='Transform Icon' class='mx-auto mb-6' />
+          <h3 class='text-2xl font-semibold text-[#4B3832]'>We Transform Problems</h3>
+          <p class='mt-4 text-[#6F5844]'>Turning inefficiencies into opportunities with scalable technology.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-[#EDE0D4]">
-    <div class="container mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold text-[#4B3832] mb-12">Explore Our Reach</h2>
-      <div id="chart-container" class="relative mx-auto" style="height: 400px;"></div>
+  <section class='py-16 bg-[#EDE0D4]'>
+    <div class='container mx-auto text-center px-6'>
+      <h2 class='text-4xl font-bold text-[#4B3832] mb-12'>Explore Our Reach</h2>
+      <div id='chart-container' class='relative mx-auto' style='height: 400px;'></div>
     </div>
   </section>
 
-  <footer class="bg-[#4B3832] py-6">
-    <div class="container mx-auto text-center px-6 text-[#F5EFE6]">
-      <p class="text-lg">&copy; 2025 Noetiq Research. All rights reserved.</p>
-      <nav class="mt-4">
-        <a href="/about" class="mx-4 text-[#EFE3D7] hover:underline">About</a>
-        <a href="/solutions" class="mx-4 text-[#EFE3D7] hover:underline">Solutions</a>
-        <a href="/blog" class="mx-4 text-[#EFE3D7] hover:underline">Research Blog</a>
-        <a href="/contact" class="mx-4 text-[#EFE3D7] hover:underline">Contact Us</a>
+  <!-- TODO: Use footer component (src/components/widgets/Footer.astro) -->
+  <footer class='bg-[#4B3832] py-6'>
+    <div class='container mx-auto text-center px-6 text-[#F5EFE6]'>
+      <p class='text-lg'>&copy; 2025 Noetiq Research. All rights reserved.</p>
+      <nav class='mt-4'>
+        <a href='/about' class='mx-4 text-[#EFE3D7] hover:underline'>About</a>
+        <a href='/solutions' class='mx-4 text-[#EFE3D7] hover:underline'>Solutions</a>
+        <a href='/blog' class='mx-4 text-[#EFE3D7] hover:underline'>Research Blog</a>
+        <a href='/contact' class='mx-4 text-[#EFE3D7] hover:underline'>Contact Us</a>
       </nav>
     </div>
   </footer>
