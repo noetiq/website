@@ -2,6 +2,9 @@
 import PageLayout from '~/layouts/PageLayout.astro'
 import {Image} from 'astro:assets'
 import Pearl2Image from '~/assets/images/pearl2.svg'
+import SolutionIcon from '../assets/images/icons/solution.svg'
+import ResearchIcon from '../assets/images/icons/research.svg'
+import TransformIcon from '../assets/images/icons/transform.svg'
 // import ProductHighlightImage from '~/assets/images/product-highlight.png'
 
 const metadata = {
@@ -35,28 +38,24 @@ const metadata = {
         md:text-8xl
         text-[#4B3832]
         mb-4
-        font-[Anuphan]
         tracking-tight'
       >
         Introducing
       </h1>
 
-      <div class='-mb-10 w-80 h-auto'>
-        <Image src={Pearl2Image} alt='Noetiq Logo' class='w-full h-auto object-cover drop-shadow-2xl' />
+      <div class='w-80 h-auto'>
+        <Image src={Pearl2Image} alt='Noetiq Logo' class='w-full h-auto -my-7 object-cover drop-shadow-2xl' />
       </div>
 
-      <h2
-        class='font-extrabold
+      <h2 class='font-extrabold
         text-5xl
         md:text-7xl
         text-[#4B3832]
-        font-[Anuphan]
-        tracking-tight'
-      >
+        tracking-tight'>
         PiRL Framework
       </h2>
 
-      <p class='max-w-xl text-lg text-[#6F5844] mt-4'>
+      <p class='text-lg text-[#6F5844] mt-4'>
         Discover how PiRL revolutionizes machine learning for businesses and beyond.
       </p>
       <a
@@ -75,21 +74,21 @@ const metadata = {
     </div>
   </section>
 
-  <section class='py-16 bg-[#EFE3D7]'>
+  <section class='py-16 bg-secondary'>
     <div class='container mx-auto flex flex-col md:flex-row items-center gap-8 px-6'>
       <!-- TODO: Image doesn't exist -->
       <!-- <div class='flex-1'>
         <Image src={ProductHighlightImage} alt='Product Highlight' class='w-full rounded-lg shadow-md' />
       </div> -->
       <div class='flex-1 text-center md:text-left'>
-        <h2 class='text-4xl font-bold text-[#4B3832]'>Introducing Our Latest Breakthrough</h2>
-        <p class='mt-4 text-lg text-[#6F5844]'>
+        <h2 class='text-4xl font-bold text-white'>Introducing Our Latest Breakthrough</h2>
+        <p class='mt-4 text-lg text-primary'>
           Discover how our proprietary ML technology is redefining the way businesses approach efficiency and
           innovation.
         </p>
         <a
           href='/solutions'
-          class='inline-block mt-6 px-6 py-3 text-white bg-[#8C6A5E] rounded shadow-lg hover:bg-[#735649] transition'
+          class='inline-block mt-6 px-6 py-3 text-white bg-[#735649] rounded shadow-lg hover:bg-[#735649] transition'
           >Learn More</a
         >
       </div>
@@ -101,20 +100,17 @@ const metadata = {
       <h2 class='text-4xl font-bold text-[#4B3832] mb-12'>What We Do</h2>
       <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
         <div class='p-6 bg-white shadow-lg rounded-lg'>
-          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
-          <img src='/images/icon-solution.svg' alt='Solution Icon' class='mx-auto mb-6' />
+          <Image src={SolutionIcon} alt='Solution Icon' class='mx-auto mb-6 w-10' />
           <h3 class='text-2xl font-semibold text-[#4B3832]'>We Build Solutions</h3>
           <p class='mt-4 text-[#6F5844]'>Crafting proprietary ML algorithms tailored to industry needs.</p>
         </div>
         <div class='p-6 bg-white shadow-lg rounded-lg'>
-          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
-          <img src='/images/icon-research.svg' alt='Research Icon' class='mx-auto mb-6' />
+          <Image src={ResearchIcon} alt='Research Icon' class='mx-auto mb-6 w-10' />
           <h3 class='text-2xl font-semibold text-[#4B3832]'>We Conduct Research</h3>
           <p class='mt-4 text-[#6F5844]'>Expanding the boundaries of what ML can achieve.</p>
         </div>
         <div class='p-6 bg-white shadow-lg rounded-lg'>
-          <!-- TODO: Image doesn't exist, replace with <Image> tag from Astro -->
-          <img src='/images/icon-transform.svg' alt='Transform Icon' class='mx-auto mb-6' />
+          <Image src={TransformIcon} alt='Transform Icon' class='mx-auto mb-6 w-10' />
           <h3 class='text-2xl font-semibold text-[#4B3832]'>We Transform Problems</h3>
           <p class='mt-4 text-[#6F5844]'>Turning inefficiencies into opportunities with scalable technology.</p>
         </div>
