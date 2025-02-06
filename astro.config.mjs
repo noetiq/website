@@ -75,7 +75,10 @@ export default defineConfig({
       config: './src/config.yaml',
     }),
 
-    react(),
+    react({
+      include: ['src/components/**/*.tsx', 'src/react/**/*.tsx'],
+      experimentalReactChildren: true,
+    }),
   ],
 
   image: {

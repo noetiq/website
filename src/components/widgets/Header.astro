@@ -4,6 +4,11 @@ import ToggleTheme from '~/components/common/ToggleTheme.astro'
 import ToggleMenu from '~/components/common/ToggleMenu.astro'
 import Button from '~/components/ui/Button.astro'
 import '@fontsource/anuphan'
+import { FaXTwitter } from 'react-icons/fa6'
+import { FaGithub } from 'react-icons/fa'
+import { TfiEmail } from 'react-icons/tfi'
+import { FaLinkedin } from 'react-icons/fa6'
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from 'astro-navbar'
 
 import { getHomePermalink } from '~/utils/permalinks'
 import { trimSlash, getAsset } from '~/utils/permalinks'
@@ -64,17 +69,59 @@ const currentPath = Astro.url ? `/${trimSlash(new URL(Astro.url).pathname)}` : '
         />
       </a>
     </div>
+    <div class="flex items-center justify-center h-12">
+      <Astronav>
+        <MenuItems class="hidden md:flex md:justify-center md:space-x-8 text-[#4B3832] font-light font-[Anuphan]">
+          <a href="/" class="hover:text-[#8C6A5E] transition">Home</a>
 
-    <nav
-      class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8 text-[#4B3832] font-light font-[Anuphan]"
-    >
-      <a href="/" class="hover:text-[#8C6A5E] transition">Home</a>
-      <a href="/solutions" class="hover:text-[#8C6A5E] transition">Solutions</a>
-      <a href="/blog" class="hover:text-[#8C6A5E] transition">Research Blog</a>
-      <a href="/about" class="hover:text-[#8C6A5E] transition">About</a>
-      <a href="/contact" class="hover:text-[#8C6A5E] transition">Contact</a>
-    </nav>
+          <Dropdown class="group relative">
+            <button class="hover:text-[#8C6A5E] transition flex items-center">
+              <span>Solutions</span>
+              <svg
+                class="ml-1 w-4 h-4 group-open:rotate-180 transition-transform"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06-.02L10 10.585l3.71-3.4a.75.75 0 111.02 1.1l-4.23 3.88a.75.75 0 01-1.02 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <DropdownItems>
+              <div class="absolute top-full left-0 bg-[#F5EFE6] shadow-md rounded-md p-2">
+                <ul>
+                  <li>
+                    <a href="/solutions/frameworks" class="block px-4 py-2 hover:text-[#8C6A5E]">Frameworks</a>
+                  </li>
+                  <li><a href="/solutions/products" class="block px-4 py-2 hover:text-[#8C6A5E]">Products</a></li>
+                  <li><a href="/solutions/services" class="block px-4 py-2 hover:text-[#8C6A5E]">Services</a></li>
+                </ul>
+              </div>
+            </DropdownItems>
+          </Dropdown>
+          <a href="/blog" class="hover:text-[#8C6A5E] transition">Research Blog</a>
+          <a href="/about" class="hover:text-[#8C6A5E] transition">About</a>
+        </MenuItems>
+      </Astronav>
+    </div>
 
-    <div class="hidden md:flex w-[120px]"></div>
+    <div class="flex justify-end items-center gap-4">
+      <a href="mailto:support@noetiqresearch.com">
+        <TfiEmail className="text-[#4B3832] hover:text-[#8C6A5E] w-4 h-4 cursor-pointer" />
+      </a>
+      <a href="https://www.linkedin.com/company/noetiq-research" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="text-[#4B3832] hover:text-[#8C6A5E] w-4 h-4 cursor-pointer" />
+      </a>
+      <a href="https://x.com/noetiq" target="_blank" rel="noopener noreferrer">
+        <FaXTwitter className="text-[#4B3832] hover:text-[#8C6A5E] w-4 h-4 cursor-pointer" />
+      </a>
+      <a href="https://github.com/noetiq" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="text-[#4B3832] hover:text-[#8C6A5E] w-4 h-4 cursor-pointer" />
+      </a>
+      <a href="https://huggingface.co/" class="flex items-center" target="_blank" rel="noopener noreferrer">
+        <img src="/src/assets/images/huggingface-text.svg" alt="Hugging Face Logo" class="h-3 w-auto" />
+      </a>
+    </div>
   </div>
 </header>
