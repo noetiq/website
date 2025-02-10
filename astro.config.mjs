@@ -32,6 +32,7 @@ export default defineConfig({
   integrations: [
     tailwind({
       applyBaseStyles: false,
+      config: './tailwind.config.cjs',
     }),
     sitemap(),
     mdx(),
@@ -76,7 +77,7 @@ export default defineConfig({
     }),
 
     react({
-      include: ['src/components/**/*.tsx', 'src/react/**/*.tsx'],
+      include: ['src/components/**/*.tsx', 'src/react/**/*.tsx', 'src/components/**/*.jsx', 'src/react/**/*.jsx'],
       experimentalReactChildren: true,
     }),
   ],

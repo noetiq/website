@@ -1,10 +1,13 @@
 ---
-interface AboutProps {}
-
-const props: AboutProps = {}
+import AboutComp from '../components/react/about/index'
+import BouncingTest from './BouncingTest.jsx'
 ---
 
 <layout>
   <h1>About Us</h1>
   <p>Learn more about our company.</p>
+
+  <!-- Import and render the bouncing ball module -->
+  <AboutComp client:load />
+  <BouncingTest client:load />
 </layout>

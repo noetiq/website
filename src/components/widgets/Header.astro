@@ -45,7 +45,8 @@ const currentPath = Astro.url ? `/${trimSlash(new URL(Astro.url).pathname)}` : '
   })
 </script>
 
-<header id="header" class="bg-[#F5EFE6] border-b border-[#EDE0D4] sticky top-0 z-50 shadow-md">
+<!-- Add 'select-none' to prevent text selection -->
+<header id="header" class="bg-[#F5EFE6] border-b border-[#EDE0D4] sticky top-0 z-50 shadow-md select-none">
   <div class="container mx-auto flex items-center justify-between py-2 px-6 relative">
     <div class="flex items-center space-x-4">
       <button class="md:hidden p-0 text-[#4B3832] hover:text-[#8C6A5E] focus:outline-none">

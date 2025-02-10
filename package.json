@@ -32,6 +32,8 @@
     "astro-embed": "^0.7.1",
     "astro-icon": "^1.1.0",
     "astro-navbar": "^2.3.9",
+    "framer-motion": "^12.4.0",
+    "gsap": "^3.12.7",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "react": "^19.0.0",
