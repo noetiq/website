@@ -2,7 +2,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import svgr from 'vite-plugin-svgr'
 
-import { defineConfig, squooshImageService } from 'astro/config'
+import { defineConfig } from 'astro/config'
 
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -83,7 +83,7 @@ export default defineConfig({
   ],
 
   image: {
-    service: squooshImageService(),
+    service: undefined,
     domains: ['cdn.pixabay.com'],
   },
 

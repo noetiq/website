@@ -1,13 +1,17 @@
 ---
 import AboutComp from '../components/react/about/index'
-import BouncingTest from './BouncingTest.jsx'
+import PageLayout from '~/layouts/PageLayout.astro'
+
+const metadata = {
+  title: 'Noetiq Research | Home',
+  description:
+    'Discover Noetiq Research: Transforming insights into innovations through machine learning, AI, and groundbreaking technologies.',
+}
 ---
 
-<layout>
-  <h1>About Us</h1>
-  <p>Learn more about our company.</p>
-
-  <!-- Import and render the bouncing ball module -->
-  <AboutComp client:load />
-  <BouncingTest client:load />
-</layout>
+<PageLayout metadata={metadata}>
+  <layout>
+    <!-- Import and render the bouncing ball module -->
+    <AboutComp client:load />
+  </layout>
+</PageLayout>
