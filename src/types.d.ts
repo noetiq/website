@@ -286,28 +286,3 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
-
-export interface Link {
-  text?: string
-  href?: string
-  ariaLabel?: string
-  icon?: string
-}
-
-export interface ActionLink extends CallToAction {}
-
-export interface MenuLink extends Link {
-  links?: Array<MenuLink>
-}
-
-export interface Props {
-  id?: string
-  links?: Array<MenuLink>
-  actions?: Array<ActionLink>
-  isSticky?: boolean
-  isDark?: boolean
-  isFullWidth?: boolean
-  showToggleTheme?: boolean
-  showRssFeed?: boolean
-  position?: string
-}

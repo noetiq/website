@@ -1,17 +1,10 @@
 ---
-import AboutComp from '../components/react/about/index'
-import PageLayout from '~/layouts/PageLayout.astro'
+interface AboutProps {}
 
-const metadata = {
-  title: 'Noetiq Research | Home',
-  description:
-    'Discover Noetiq Research: Transforming insights into innovations through machine learning, AI, and groundbreaking technologies.',
-}
+const props: AboutProps = {}
 ---
 
-<PageLayout metadata={metadata}>
-  <layout>
-    <!-- Import and render the bouncing ball module -->
-    <AboutComp client:load />
-  </layout>
-</PageLayout>
+<layout>
+  <h1>About Us</h1>
+  <p>Learn more about our company.</p>
+</layout>
