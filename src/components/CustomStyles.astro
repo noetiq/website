@@ -20,19 +20,41 @@ import '@fontsource-variable/inter'
 ---
 
 <style is:inline>
+  @font-face {
+    font-family: 'Anuphan';
+    src: url('/assets/fonts/Anuphan-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Anuphan';
+    src: url('/assets/fonts/Anuphan-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Anuphan';
+    src: url('/assets/fonts/Anuphan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
   :root {
-    --aw-font-sans: 'InterVariable';
-    --aw-font-serif: 'InterVariable';
-    --aw-font-heading: 'InterVariable';
+    --aw-font-sans: 'Anuphan';
+    --aw-font-serif: 'Anuphan';
+    --aw-font-heading: 'Anuphan';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: #dad5c9;
+    --aw-color-secondary: #303b4e;
+    --aw-color-accent: #928477;
 
-    --aw-color-text-heading: 'InterVariable';
+    --aw-color-text-heading: rgb(75 56 50);
     --aw-color-text-default: rgb(16 16 16);
     --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-bg-page: #e7e4e0;
 
     --aw-color-bg-page-dark: rgb(3 6 32);
 
@@ -42,13 +64,13 @@ import '@fontsource-variable/inter'
   }
 
   .dark {
-    --aw-font-sans: 'InterVariable';
-    --aw-font-serif: 'InterVariable';
-    --aw-font-heading: 'InterVariable';
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: 'Inter Variable';
+    --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: #dad5c9;
+    --aw-color-secondary: #303b4e;
+    --aw-color-accent: #928477;
 
     --aw-color-text-heading: rgb(247, 248, 248);
     --aw-color-text-default: rgb(229 236 246);
@@ -60,4 +82,4 @@ import '@fontsource-variable/inter'
       color: snow;
     }
   }
-</style>
+<stylee>

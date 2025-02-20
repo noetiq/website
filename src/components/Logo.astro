@@ -1,9 +1,10 @@
 ---
-import {SITE} from 'astrowind:config'
+import {Image} from 'astro:assets'
+import NoetiqLogo from '../assets/images/noetiq_logodesign_secondary_logo_color.svg'
 ---
 
 <span
   class='self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white'
 >
-  {SITE?.name}
+  <Image src={NoetiqLogo} alt='Noetiq Logo' class='h-14 w-auto' />
 </span>
